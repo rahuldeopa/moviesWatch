@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="image/images.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Netflix Clone</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="head">
+        <a href="#" class="logo">
+            <img src="image/images.png" alt="Netflix Logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Recently Added</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            
+            <div class="auth-icon" id="auth">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                <div class="auth-form" id="auth-form">
+                    <form id="signin-form">
+                        <h2>Sign In</h2>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="123@gmail.com">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <button type="submit">Sign In</button>
+                        <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+                    </form>
+                    <!-- Sign-up form -->
+                    <form id="signup-form" style="display:none;">
+                        <h2>Sign Up</h2>
+                        <label for="new-email">Email:</label>
+                        <input type="email" id="new-email" name="email" required>
+                        <label for="new-password">Password:</label>
+                        <input type="password" id="new-password" name="password" required>
+                        <button type="submit">Sign Up</button>
+                        <p>Already have an account? <a href="#" id="show-signin">Sign In</a></p>
+                    </form>        
+                </div>
+            </div>
+            <a href="#" class="search-icon">
+                <input type="text" class="search" placeholder="search">
+                <i class="fa fa-search"></i>
+
+            </a>
+            <a href="#" class="notification-icon">
+                <i class="fa fa-bell"></i>
+            </a>
+            <a href="#">
+                <img src="image/RAHULLL.jpg" alt="Profile Icon" class="profile-icon">
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Banner) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Featured Movie Title</h1>
+            <p>A short description of the featured movie or show...</p>
+            <div class="hero-buttons">
+                <a href="#" class="play-btn">
+                    <i class="fa fa-play"></i> Play
+                </a>
+                <a href="#" class="more-info-btn">
+                    <i class="fa fa-info-circle"></i> More Info
+                </a>
+            </div>
+        </div>
+    
+    </section>
+
+ <!-- Categories Section -->
+<main>
+   
+    <section class="categories">
+     
+        <h2>Trending Now</h2>
+        <div class="trend">
+            <!-- Movie 1 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/L3pk_TBkihU?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0">
+                <img src="image/1.jpg" alt="Movie 1" class="movie-thumbnail">
+                <iframe class="trailer" 
+                    src="https://www.youtube.com/embed/L3pk_TBkihU" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Movie 2 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/TcMBFSGVi1c?si=CVNaG7G53xkAu6ML?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0">
+                <img src="image/2.jpg" alt="Endgame" class="movie-thumbnail">
+                <iframe class="trailer" 
+                    src="https://www.youtube.com/embed/something" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Movie 3 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/sj9J2ecsSpo?si=NczT326OzvALp3JX?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0">
+                <img src="image/3.jpg" alt="Movie 3" class="movie-thumbnail">
+                <iframe class="trailer" 
+                    src="https://www.youtube.com/embed/something_else" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Movie 4 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/mqqft2x_Aa4?si=gG-rdS_VqFFgEzSW?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0">
+                <img src="image/4.jpeg" alt="Movie 4" class="movie-thumbnail">
+                <iframe class="trailer" 
+                    src="https://www.youtube.com/embed/another_trailer" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <h2>Netflix Originals</h2>
+        <div class="trend">
+            <!-- Movie 5 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/netflix_trailer?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0">
+                <img src="image/5.jpeg" alt="Movie 5" class="movie-thumbnail">
+                <iframe class="trailer" 
+                    src="https://www.youtube.com/embed/netflix_trailer" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Movie 6 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/original_movie_6?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0">
+                <img src="image/6.jpeg" alt="Movie 6" class="movie-thumbnail">
+                <iframe class="trailer" 
+                    src="https://www.youtube.com/embed/original_movie_6" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Movie 7 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/original_movie_7?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0">
+                <img src="image/7.jpeg" alt="Movie 7" class="movie-thumbnail">
+                <iframe class="trailer" 
+                    src="https://www.youtube.com/embed/original_movie_7" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <h2>Action Movies</h2>
+        <div class="trend">
+            <!-- Movie 8 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/action_movie_8?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0">
+                <img src="image/8.jpeg" alt="Movie 8" class="movie-thumbnail">
+                <iframe class="trailer" 
+                    src="https://www.youtube.com/embed/action_movie_8" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Movie 9 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/action_movie_9?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0">
+                <img src="image/9.jpeg" alt="Movie 9" class="movie-thumbnail">
+                <iframe class="trailer" 
+                    src="https://www.youtube.com/embed/action_movie_9" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Movie 10 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/action_movie_10?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0">
+                <img src="image/10.jpeg" alt="Movie 10" class="movie-thumbnail">
+                <iframe class="trailer" 
+                    src="https://www.youtube.com/embed/action_movie_10" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-columns">
+            <ul class="footer-links">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li><a href="#">Corporate Information</a></li>
+            </ul>
+        </div>
+        <p>© Netflix Clone - All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript for toggling between Sign-in and Sign-up -->
+    <script src="script.js" defer type="text/javascript"></script>
+</body>
+</html>

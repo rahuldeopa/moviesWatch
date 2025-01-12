@@ -1,0 +1,96 @@
+<main>
+    <section class="categories">
+        <!-- Trending Now Section -->
+        <h2>Trending Now</h2>
+        <div class="trend">
+            <!-- Movie 1 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/L3pk_TBkihU?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0">
+                <img src="image/1.jpg" alt="Movie 1" class="movie-thumbnail">
+                <iframe class="trailer" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Movie 2 -->
+            <div class="movie" data-trailer="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0">
+                <img src="image/2.jpg" alt="Endgame" class="movie-thumbnail">
+                <iframe class="trailer" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+  /* Styling the container */
+  .trend {
+      display: flex;
+      gap: 20px;
+  }
+
+  /* Image and iframe wrapper */
+  .movie {
+      position: relative;
+      width: 200px;  /* Set the width for the movie container */
+      height: 300px; /* Set the height for the movie container */
+      overflow: hidden; /* Ensures that both image and iframe fit inside the container */
+  }
+
+  .movie-thumbnail {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image covers the entire space */
+      display: block;
+      transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Hide iframe (trailer) initially */
+  .trailer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: none;
+      z-index: 10;
+  }
+
+  /* Show the trailer on hover */
+  .movie:hover .movie-thumbnail {
+      opacity: 0; /* Hide the image */
+  }
+</style>
+
+<script>
+  // Function to add the trailer with delay
+  const movies = document.querySelectorAll('.movie');
+
+  movies.forEach(movie => {
+      let timeout;
+      const trailerUrl = movie.getAttribute('data-trailer');
+      const iframe = movie.querySelector('.trailer');
+
+      // On mouse enter (hover)
+      movie.addEventListener('mouseenter', () => {
+          timeout = setTimeout(() => {
+              iframe.src = trailerUrl; // Load the trailer with autoplay after the delay
+              iframe.style.display = 'block'; // Show the trailer iframe
+          }, 1000); // Delay of 1 second (1000 ms)
+      });
+
+      // On mouse leave (stop hover)
+      movie.addEventListener('mouseleave', () => {
+          clearTimeout(timeout); // Cancel the delayed action if the mouse leaves
+          iframe.src = ''; // Remove the trailer src to stop playback
+          iframe.style.display = 'none'; // Hide the iframe again
+      });
+  });
+</script>
